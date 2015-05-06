@@ -14,3 +14,17 @@ so, I am using `nvprof` to generate report first, and then view in the visual pr
 then start `nvvp` (GUI)
 
 `import` from `nvprof` to view report.
+
+
+###concentrated profile###
+
+add:
+
+    #include <cuda_profiler_api.h>
+
+then add:
+
+
+    cudaProfilerStart();
+    // code
+    cudaProfilerStop();
