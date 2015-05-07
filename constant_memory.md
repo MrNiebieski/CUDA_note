@@ -23,3 +23,6 @@ compare to `global memory` copy (in `.cpp` file):
 
     cudaMemcpy(d_Input,  h_Input,  imageW*imageH*sizeof(float), cudaMemcpyHostToDevice));
     cudaMemcpy(h_Output, d_Output, imageW*imageH*sizeof(float), cudaMemcpyDeviceToHost));
+
+
+There is no need to free constant memory.
