@@ -28,3 +28,16 @@ then add:
     cudaProfilerStart();
     // code
     cudaProfilerStop();
+
+
+###register count###
+
+in `Makefile` add:
+
+    NVCCFLAGS = -O3 -g -arch=sm_35 -Xptxas="-v"
+
+`-Xptxas="-v"` will count register use when compile.
+
+use with `grep`
+
+    make 2>&1|grep -e register -e Function
